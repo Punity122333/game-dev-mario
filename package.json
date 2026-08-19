@@ -1,0 +1,11 @@
+{
+  "name": "game-dev-mario",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Basic Node.js DOM template",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}
