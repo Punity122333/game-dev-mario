@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Transform Laboratory</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>this is a heading</h1> 
+
+    <p id="myText">Button text</p>
+    <button type="button" id="Button">Click Me</button>
+
+    <div class="container">
+        <div class="box" id="box1">BOX1</div>
+        <div class="box" id="box2">BOX2</div>
+    </div>
+
+    <script>
+        const button = document.getElementById("Button");
+        const text = document.getElementById("myText");
+        
+        
+        const cont = document.getElementById("box1");
+
+        button.addEventListener("click", function() {
+            
+            text.textContent = "Button kill!";
+            
+           
+            cont.style.backgroundColor = '#000000'; 
+        });
+    </script>
 </body>
 </html>
