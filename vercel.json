@@ -1,22 +1,26 @@
 {
   "routes": [
     {
-      "src": "^/$",
-      "status": 307,
+      "src": "^/game/?$",
+      "status": 308,
       "headers": {
-        "Location": "/game/index.html"
+        "Location": "/"
       }
     },
     {
-      "src": "^/game/?$",
-      "dest": "/game/index.html"
+      "src": "^/game/(.*)$",
+      "status": 308,
+      "headers": {
+        "Location": "/$1"
+      }
     },
     {
-      "handle": "filesystem"
+      "src": "^/$",
+      "dest": "/game/index.html"
     },
     {
       "src": "^/(.*)$",
-      "dest": "/game/index.html"
+      "dest": "/game/$1"
     }
   ]
 }
