@@ -4,15 +4,12 @@
       "src": "^/$",
       "status": 307,
       "headers": {
-        "Location": "/game/"
+        "Location": "/game/index.html"
       }
     },
     {
-      "src": "^/game$",
-      "status": 307,
-      "headers": {
-        "Location": "/game/"
-      }
+      "src": "^/game/?$",
+      "dest": "/game/index.html"
     },
     {
       "handle": "filesystem"
