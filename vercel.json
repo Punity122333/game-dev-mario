@@ -1,17 +1,25 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
-      "destination": "/game/index.html"
+      "src": "^/$",
+      "status": 307,
+      "headers": {
+        "Location": "/game/"
+      }
     },
     {
-      "source": "/game",
-      "destination": "/game/index.html"
+      "src": "^/game$",
+      "status": 307,
+      "headers": {
+        "Location": "/game/"
+      }
     },
     {
-      "source": "/game/",
-      "destination": "/game/index.html"
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/game/index.html"
     }
   ]
 }
