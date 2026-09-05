@@ -1,0 +1,26 @@
+{
+  "routes": [
+    {
+      "src": "^/game/?$",
+      "status": 308,
+      "headers": {
+        "Location": "/"
+      }
+    },
+    {
+      "src": "^/game/(.*)$",
+      "status": 308,
+      "headers": {
+        "Location": "/$1"
+      }
+    },
+    {
+      "src": "^/$",
+      "dest": "/game/index.html"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/game/$1"
+    }
+  ]
+}
